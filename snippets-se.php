@@ -1,7 +1,7 @@
 
 <?php
 /**
- * Plugin Name: Variables
+ * Plugin Name: Snippets SE
  * Plugin URI: http://www.mattvona.com/work
  * Description: Adds a custom variable like experience. Create a new snippet and then add it to your page by typing the snippet word in curly brackets: {{snippet}}
  * Version: 0.0.1
@@ -34,5 +34,10 @@ function scanVar($content) {
 	return $content;
 }
 
-add_filter('the_content','scanVar');
-
+add_filter('the_content', 'scanVar');
+add_filter('widget_title', 'scanVar');
+add_filter('widget_text', 'scanVar');
+add_filter('the_content', 'scanVar');
+add_filter('the_excerpt', 'scanVar');
+add_filter('the_title', 'scanVar');
+add_filter('get_the_excerpt', 'scanVar');

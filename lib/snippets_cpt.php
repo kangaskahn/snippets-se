@@ -76,3 +76,34 @@ function create_snippet_category() {
 
 	register_taxonomy( 'category', array( 'snippet' ), $args );
 }
+
+add_filter('manage_edit-snippet_columns' , 'snippet_cpt_columns');
+function snippet_cpt_columns($columns) {
+		unset($columns['author']);
+	   unset($columns['categories']);
+	   unset($columns['tags']);
+	   unset($columns['comments']);
+	   unset($columns['date']);
+
+	$new_columns = array(
+		'snippet_content' => __('Snippet Content', 'snippet-se'),
+		'categories' => __('Categories', 'snippet-se'),
+		'date' => __('Date', 'snippet-se'),
+	);
+    return array_merge($columns, $new_columns);
+}
+
+add_action( 'manage_snippet_posts_custom_column' , 'custom_columns_snippets_se', 10, 2 );
+function custom_columns_snippets_se( $column, $post_id ) {
+	switch ( $column ) {
+		case 'snippet_content':
+			$mypost = get_post($post_id);
+			
+			if ( isset($mypost) ) {
+				echo apply_filters('the_content',$mypost->post_content);
+			} else {
+				_e( 'Unable to get author(s)', 'your_text_domain' );
+			}
+			break;
+	}
+}

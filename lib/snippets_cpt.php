@@ -100,7 +100,7 @@ function custom_columns_snippets_se( $column, $post_id ) {
 			$mypost = get_post($post_id);
 			
 			if ( isset($mypost) ) {
-				echo apply_filters('the_content',$mypost->post_content);
+				apply_filters('the_content',$mypost->post_content);
 			} else {
 				_e( 'Unable to get author(s)', 'your_text_domain' );
 			}

@@ -28,8 +28,10 @@ function scanVar($content) {
 	endforeach;
 
 	$count = count($words);
-	for($i = 0; $i <= $count; $i++) {
-		$content = str_replace('{{'.$words[$i]['word'].'}}', $words[$i]['result'], $content);
+	if ($count > 0) {
+		for($i = 0; $i <= $count; $i++) {
+			$content = str_replace('{{'.$words[$i]['word'].'}}', $words[$i]['result'], $content);
+		}
 	}
 	return $content;
 }

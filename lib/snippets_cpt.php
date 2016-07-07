@@ -52,17 +52,17 @@ function etd_cpt_vars() {
 /* Add Taxonomy to Snippets */
 function create_snippet_category() {
 	$labels = array(
-		'name'              => _x( 'Categories', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Category', 'taxonomy singular name' ),
-		'search_items'      => __( 'Search Categories' ),
-		'all_items'         => __( 'All Categories' ),
-		'parent_item'       => __( 'Parent Category' ),
-		'parent_item_colon' => __( 'Parent Category:' ),
-		'edit_item'         => __( 'Edit Category' ),
-		'update_item'       => __( 'Update Category' ),
-		'add_new_item'      => __( 'Add New Category' ),
-		'new_item_name'     => __( 'New Category Name' ),
-		'menu_name'         => __( 'Category' ),
+		'name'              => _x( 'Collections', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Collection', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Collections' ),
+		'all_items'         => __( 'All Collections' ),
+		'parent_item'       => __( 'Parent Collection' ),
+		'parent_item_colon' => __( 'Parent Collection:' ),
+		'edit_item'         => __( 'Edit Collection' ),
+		'update_item'       => __( 'Update Collection' ),
+		'add_new_item'      => __( 'Add New Collection' ),
+		'new_item_name'     => __( 'New Collection Name' ),
+		'menu_name'         => __( 'Collections' ),
 	);
 
 	$args = array(
@@ -71,10 +71,10 @@ function create_snippet_category() {
 		'show_ui'           => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'category' ),
+		'rewrite'           => array( 'slug' => 'collection' ),
 	);
 
-	register_taxonomy( 'category', array( 'snippet' ), $args );
+	register_taxonomy( 'sse-collection', array( 'snippet' ), $args );
 }
 
 add_filter('manage_edit-snippet_columns' , 'snippet_cpt_columns');
@@ -87,7 +87,7 @@ function snippet_cpt_columns($columns) {
 
 	$new_columns = array(
 		'snippet_content' => __('Snippet Content', 'snippet-se'),
-		'categories' => __('Categories', 'snippet-se'),
+		'categories' => __('Collections', 'snippet-se'),
 		'date' => __('Date', 'snippet-se'),
 	);
     return array_merge($columns, $new_columns);

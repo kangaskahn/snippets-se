@@ -1,4 +1,4 @@
-## Snippets SE WordPRess Plugin v1.0.0
+## Snippets SE WordPress Plugin v1.0.0
 ##### The simple way to replace your text using custom variables!
 
 ##### Description

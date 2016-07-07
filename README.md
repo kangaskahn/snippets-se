@@ -1,6 +1,6 @@
-## Easy To-Do
-##### The simple WordPress To-Do list plugin
+## Snippets SE
+##### The simple way to replace your text using custom variables!
 
 ##### Description
-This plugin adds a to-do list inside of your WordPress installation for your administrators. Assign a task owner, and mark as complete or review. More features to come!
+Snippets SE allows you to create variables that render as different text on your site. You could use {{phone}} to display your company's phone number across your site, and only have to change it in 1 place. Make your own variables and customize them to do things!
 

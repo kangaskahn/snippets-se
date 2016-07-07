@@ -27,19 +27,21 @@ function scanVar($content) {
 		 array_push($words, $word); 
 	endforeach;
 
-	$count = count($words);
-	if ($count > 0) {
-		for($i = 0; $i <= $count; $i++) {
-			$content = str_replace('{{'.$words[$i]['word'].'}}', $words[$i]['result'], $content);
-		}
+	wp_reset_postdata();
+	//$count = count($words);
+	$i = 0;
+	foreach($words as $word) {
+		//print_r($word);
+		$content = str_replace('{{'.$word['word'].'}}', $word['result'], $content);
+		$i++;
 	}
 	return $content;
 }
 
-add_filter('the_content', 'scanVar');
-add_filter('widget_title', 'scanVar');
-add_filter('widget_text', 'scanVar');
-add_filter('the_content', 'scanVar');
-add_filter('the_excerpt', 'scanVar');
-add_filter('the_title', 'scanVar');
-add_filter('get_the_excerpt', 'scanVar');
+/* Add necessary filters for Site */
+add_filter('the_content', 		'scanVar');
+add_filter('widget_title', 		'scanVar');
+add_filter('widget_text', 		'scanVar');
+add_filter('the_excerpt', 		'scanVar');
+add_filter('the_title', 		'scanVar');
+add_filter('get_the_excerpt', 	'scanVar');

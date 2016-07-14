@@ -14,7 +14,7 @@
 include('lib/snippets_cpt.php');
 
 //file_get_contents
-function scanVar($content) {
+function snippetsse_scanVar($content) {
 	$word;
 	$words = array();
 	$args = array( 'post_type' => array( 'snippet' ));
@@ -39,9 +39,9 @@ function scanVar($content) {
 }
 
 /* Add necessary filters for Site */
-add_filter('the_content', 		'scanVar');
-add_filter('widget_title', 		'scanVar');
-add_filter('widget_text', 		'scanVar');
-add_filter('the_excerpt', 		'scanVar');
-add_filter('the_title', 		'scanVar');
-add_filter('get_the_excerpt', 	'scanVar');
+add_filter('the_content', 		'snippetsse_scanVar');
+add_filter('widget_title', 		'snippetsse_scanVar');
+add_filter('widget_text', 		'snippetsse_scanVar');
+add_filter('the_excerpt', 		'snippetsse_scanVar');
+add_filter('the_title', 		'snippetsse_scanVar');
+add_filter('get_the_excerpt', 	'snippetsse_scanVar');

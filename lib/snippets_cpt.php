@@ -3,11 +3,11 @@
 =            SNIPPETS CPT FOR PLUGIN            =
 ================================================*/
 
-add_action( 'init', 'etd_cpt_vars', 0 );
-add_action( 'init', 'create_snippet_category', 0 );
+add_action( 'init', 'snippetsse_etd_cpt_vars', 0 );
+add_action( 'init', 'snippetsse_create_snippet_category', 0 );
 
 /* Add Snippets CPT */
-function etd_cpt_vars() {
+function snippetsse_etd_cpt_vars() {
 	$labels = array(
 		'name'                => _x( 'Snippets', 'Post Type General Name', 'snippet' ),
 		'singular_name'       => _x( 'Snippet', 'Post Type Singular Name', 'snippet' ),
@@ -50,7 +50,7 @@ function etd_cpt_vars() {
 }
 
 /* Add Taxonomy to Snippets */
-function create_snippet_category() {
+function snippetsse_create_snippet_category() {
 	$labels = array(
 		'name'              => _x( 'Collections', 'taxonomy general name' ),
 		'singular_name'     => _x( 'Collection', 'taxonomy singular name' ),
@@ -77,8 +77,8 @@ function create_snippet_category() {
 	register_taxonomy( 'sse-collection', array( 'snippet' ), $args );
 }
 
-add_filter('manage_edit-snippet_columns' , 'snippet_cpt_columns');
-function snippet_cpt_columns($columns) {
+add_filter('manage_edit-snippet_columns' , 'snippetsse_snippet_cpt_columns');
+function snippetsse_snippet_cpt_columns($columns) {
 		unset($columns['author']);
 	   unset($columns['categories']);
 	   unset($columns['tags']);
@@ -93,8 +93,8 @@ function snippet_cpt_columns($columns) {
     return array_merge($columns, $new_columns);
 }
 
-add_action( 'manage_snippet_posts_custom_column' , 'custom_columns_snippets_se', 10, 2 );
-function custom_columns_snippets_se( $column, $post_id ) {
+add_action( 'manage_snippet_posts_custom_column' , 'snippetsse_custom_columns_snippets_se', 10, 2 );
+function snippetsse_custom_columns_snippets_se( $column, $post_id ) {
 	switch ( $column ) {
 		case 'snippet_content':
 			$mypost = get_post($post_id);

@@ -10,4 +10,4 @@ The Snippets SE WordPress plugin allows you to create variables that render as d
 v1.0.0
 - Initial Release
 
-(Official WordPress Plugin Page)[https://wordpress.org/plugins/snippets-se/]
+[Official WordPress Plugin Page](https://wordpress.org/plugins/snippets-se/)

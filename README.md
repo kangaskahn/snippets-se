@@ -1,4 +1,4 @@
-## Snippets SE WordPress Plugin v1.0.1
+## Snippets SE WordPress Plugin
 ##### The simple way to replace your text using custom variables!
 
 ##### Description

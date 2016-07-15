@@ -1,6 +1,9 @@
 === Snippets SE ===
 Contributors: Matt Vona
 Tags: content, replace, custom, variables
+Requires at least: 4
+Tested up to: 4.5.3
+Stable tag: 1.0.1
 License: GPLv2
 
 Use custom {{variables}} across your site to display and manage information in multiple places.

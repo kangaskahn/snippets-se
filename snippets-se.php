@@ -3,7 +3,7 @@
  * Plugin Name: Snippets SE
  * Plugin URI: http://www.mattvona.com/work
  * Description: Adds a custom variable like experience. Create a new snippet and then add it to your page by typing the snippet word in curly brackets: {{snippet}}
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Matt Vona
  * Author URI: http://mattvona.com
  * License: GPL2

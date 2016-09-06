@@ -3,7 +3,7 @@
  * Plugin Name: Snippets SE
  * Plugin URI: http://www.mattvona.com/work
  * Description: Adds a custom variable like experience. Create a new snippet and then add it to your page by typing the snippet word in curly brackets: {{snippet}}
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Matt Vona
  * Author URI: http://mattvona.com
  * License: GPL2
@@ -42,5 +42,4 @@ add_filter('the_content', 		'snippetsse_scanVar');
 add_filter('widget_title', 		'snippetsse_scanVar');
 add_filter('widget_text', 		'snippetsse_scanVar');
 add_filter('the_excerpt', 		'snippetsse_scanVar');
-add_filter('the_title', 		'snippetsse_scanVar');
 add_filter('get_the_excerpt', 	'snippetsse_scanVar');

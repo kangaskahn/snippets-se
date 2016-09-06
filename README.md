@@ -4,7 +4,11 @@
 ##### Description
 The Snippets SE WordPress plugin allows you to create variables that render as different text on your site. You could use {{phone}} to display your company's phone number across your site, and only have to change it in 1 place. Make your own variables and customize them to do things!
 
-### Current Version: v1.0.2
+### Current Version: v1.0.3
+- Fixed bug that displayed all page and post names listed as first on list. This was a title issue. 
+- No more support for the title. Unfortunately this causes issue with the admin panel. Hopefully will fix in later update.
+
+v1.0.2
 - Tested with WordPress 4.6
 
 v1.0.1

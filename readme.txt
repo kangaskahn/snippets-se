@@ -3,7 +3,7 @@ Contributors: Matt Vona
 Tags: content, replace, custom, variables
 Requires at least: 4
 Tested up to: 4.6
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2
 
 Use custom {{variables}} across your site to display and manage information in multiple places.
@@ -19,7 +19,7 @@ Download and activate the plugin. A snippets admin menu will appear. Create, edi
 * Page content fields
 * text widget title fields
 * text widget content fields
-* Page titles
+* -Page titles- (This has been removed)
 * excerpts
 
 *Advanced: *
@@ -28,7 +28,11 @@ You can use the function `snippetsse_scanVar` for your own functions by adding a
 `add_filter(\'the_content\', \'snippetsse_scanVar\');`
 
 == Changelog ==
-Current Version: v1.0.2
+Current Version: v1.0.3
+- Fixed bug that displayed all page and post names listed as first on list. This was a title issue. 
+- No more support for the title. Unfortunately this causes issue with the admin panel. Hopefully will fix in later update.
+
+v1.0.2
 - Tested with WordPress 4.6
 
 v1.0.1

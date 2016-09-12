@@ -39,7 +39,6 @@ function snippetsse_scanVar($content) {
 
 /* Add necessary filters for Site */
 add_filter('the_content', 		'snippetsse_scanVar');
-add_filter('widget_title', 		'snippetsse_scanVar');
 add_filter('widget_text', 		'snippetsse_scanVar');
 add_filter('the_excerpt', 		'snippetsse_scanVar');
 add_filter('get_the_excerpt', 	'snippetsse_scanVar');
